@@ -1,7 +1,7 @@
 import React from 'react'
 
 const PassBox = (props) => {
-    const { label, placeholder } = props;
+    const { label, placeholder, onChange } = props;
   return (
     <>
         <li>
@@ -11,6 +11,7 @@ const PassBox = (props) => {
             <input
                 type="password"
                 placeholder={placeholder}
+                onChange = {onChange}
             />
         </li>
     </>

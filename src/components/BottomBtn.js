@@ -1,11 +1,22 @@
 import React from 'react'
 
 const BottomBtn = (props) => {
-    const { name } = props;
+    const { name, varient, onClick } = props;
+    const primary = {
+        background:'#1d80e2',
+        color: '#fff'
+    }
+
+    const secondary = {
+        background:'#898989',
+        color: '#fff'
+    }
     return (
         <>
-            <button>
-                {name}
+            <button
+                style={varient === 'primary' ? primary: secondary }
+                onClick={onClick}
+            >{name}
             </button>
         </>
     )
