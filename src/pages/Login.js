@@ -4,8 +4,8 @@ import BottomBtn from '../components/BottomBtn';
 import PassBox from '../components/PassBox';
 
 const Login = () => {
-    const [enteredId, setEnteredId ]= useState('');
-    const [enteredPw, setEnteredPw ]= useState('');
+    const [ enteredId, setEnteredId ]= useState('');
+    const [ enteredPw, setEnteredPw ]= useState('');
 
     const [ btnIsActive, setBtnIsActive ] = useState(false);
 
@@ -17,17 +17,9 @@ const Login = () => {
         }
     },[enteredId, enteredPw])
 
-    // const onIdChange = useCallback( (e) => {
-    //     setEnteredId(e.target.value);
-    // },[])
-
     const onIdChange = (e) => {
         setEnteredId(e.target.value);
     }
-
-    // const onPwChange = useCallback( (e) => {
-    //     setEnteredPw(e.target.value);
-    // },[])
 
     const onPwChange = (e) => {
         setEnteredPw(e.target.value);
