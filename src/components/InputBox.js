@@ -18,4 +18,4 @@ const InputBox = (props) => {
   )
 }
 
-export default InputBox
+export default InputBox;

@@ -1,4 +1,4 @@
-import React,{ useState, useCallback, useEffect } from 'react';
+import React,{ useState, useEffect } from 'react';
 import InputBox from '../components/InputBox';
 import BottomBtn from '../components/BottomBtn';
 import PassBox from '../components/PassBox';
@@ -17,13 +17,21 @@ const Login = () => {
         }
     },[enteredId, enteredPw])
 
-    const onIdChange = useCallback( (e) => {
-        setEnteredId(e.target.value);
-    },[])
+    // const onIdChange = useCallback( (e) => {
+    //     setEnteredId(e.target.value);
+    // },[])
 
-    const onPwChange = useCallback( (e) => {
+    const onIdChange = (e) => {
+        setEnteredId(e.target.value);
+    }
+
+    // const onPwChange = useCallback( (e) => {
+    //     setEnteredPw(e.target.value);
+    // },[])
+
+    const onPwChange = (e) => {
         setEnteredPw(e.target.value);
-    },[])
+    }
 
     const btnTest = () => {
         console.log(`this is enteredId:::: ${enteredId}`);
@@ -38,7 +46,6 @@ const Login = () => {
         <>
             <InputBox 
                 label="아이디"
-                type="text"
                 placeholder="아이디 입력"
                 onChange={onIdChange}
             />

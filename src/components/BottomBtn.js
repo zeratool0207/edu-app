@@ -22,4 +22,4 @@ const BottomBtn = (props) => {
     )
 }
 
-export default BottomBtn
+export default BottomBtn;
