@@ -1,6 +1,6 @@
 import React from 'react'
 
-const InputBox = (props) => {
+const PassBox = (props) => {
     const { label, placeholder } = props;
   return (
     <>
@@ -9,7 +9,7 @@ const InputBox = (props) => {
                 { label }
             </label>
             <input
-                type="text"
+                type="password"
                 placeholder={placeholder}
             />
         </li>
@@ -17,4 +17,4 @@ const InputBox = (props) => {
   )
 }
 
-export default InputBox
+export default PassBox;
