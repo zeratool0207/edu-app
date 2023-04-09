@@ -1,4 +1,5 @@
 import React,{ useState, useEffect } from 'react';
+import axios from 'axios';
 import InputBox from '../components/InputBox';
 import BottomBtn from '../components/BottomBtn';
 import PassBox from '../components/PassBox';
@@ -25,10 +26,29 @@ const Login = () => {
         setEnteredPw(e.target.value);
     }
 
-    const btnTest = () => {
-        console.log(`this is enteredId:::: ${enteredId}`);
-        console.log(`this is enteredPw:::: ${enteredPw}`);
+    // 최초 렌더링시 1회 작동
+//    useEffect( () => {
+//     console.log('1234');
+//    },[]); // [] : deps ( dependency)
+
+//    useEffect( () => {
+//     console.log(enteredId);
+//    },[enteredId]);
+
+//    useEffect( () => {
+//     console.log(enteredPw);
+//    },[enteredPw]);
+
+   useEffect( () => {
+    if ( enteredId !== '' && enteredPw !== '' ) {
+        setBtnIsActive(true);
+    } else {
+        // enteredId === '' || enteredPw === ''
+        setBtnIsActive(false);
     }
+   },[enteredId, enteredPw]);
+
+    
 
     const btnClick = () => {
         alert('성공');
@@ -46,9 +66,12 @@ const Login = () => {
                 placeholder="비밀번호 입력"
                 onChange={onPwChange}
             />
-            <button
-                onClick={btnTest}
-            >테스트</button>
+            { enteredId !== '' &&
+                <div>enteredId : {enteredId}</div>
+            }
+            { enteredPw !== '' && 
+                <div>enteredPw : {enteredPw}</div>
+            }
             {btnIsActive
                 ?
                     <BottomBtn 

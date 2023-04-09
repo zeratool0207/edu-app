@@ -1,7 +1,7 @@
 import React from 'react'
 
 const InputBox = (props) => {
-    const { label, placeholder,onChange } = props;
+    const  { label, placeholder, onChange } = props;
   return (
     <>
         <li>
@@ -10,7 +10,7 @@ const InputBox = (props) => {
             </label>
             <input
                 type="text"
-                placeholder={placeholder}
+                placeholder={ placeholder }
                 onChange = {onChange}
             />
         </li>
