@@ -1,17 +1,18 @@
 import React from 'react'
 
 const InputBox = (props) => {
-    const  { label, placeholder, onChange } = props;
+    // const  { label, placeholder } = props;
   return (
     <>
         <li>
             <label>
-                { label }
+                { props.label }
             </label>
             <input
                 type="text"
-                placeholder={ placeholder }
-                onChange = {onChange}
+                placeholder={ props.placeholder }
+                onChange = {props.onChange}
+                value = {props.value}
             />
         </li>
     </>

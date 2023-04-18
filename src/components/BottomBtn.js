@@ -1,7 +1,7 @@
 import React from 'react'
 
-const BottomBtn = (props) => {
-    const { name, varient, onClick } = props;
+const BottomBtn = ({ name, varient, onClick }) => {
+    // const { name, varient } = props;
     const primary = {
         background:'#1d80e2',
         color: '#fff'
